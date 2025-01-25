@@ -1,0 +1,11 @@
+DELAY 1000 
+GUI SPACE 
+DELAY 1000 
+STRING safari 
+DELAY 1000 
+ENTER 
+DELAY 1000 
+GUI L 
+STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ
+DELAY 1000 
+ENTER

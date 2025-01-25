@@ -1,0 +1,17 @@
+REM by mastrpcs
+REM dont use with bad intent!!!
+
+
+GUI
+STRING cmd
+DELAY 500
+ENTER
+DELAY 1500
+STRING cd C:\
+ENTER
+STRING color a
+ENTER
+STRING tree
+ENTER
+
+
