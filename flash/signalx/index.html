@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Signal X Webflasher</title>
+    <meta
+      name="description"
+      content="Easily allow users to flash Signal X Firmware to their ESP-devices on the web."
+    />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta property="og:title" content="Signal X Webflasher" />
+    <meta property="og:site_name" content="Signal X Webflasher" />
+    <meta
+      property="og:url"
+      content="https://mastrpcs.github.io/flash/signalx"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Easily allow users to flash Signal X Firmware to their ESP-devices on the web."
+    />
+    <meta
+      property="og:image"
+      content="https://esphome.github.io/esp-web-tools/static/social.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Signal X Webflasher" />
+    <meta
+      name="twitter:description"
+      content="Easily allow users to flash Signal X Firmware to their ESP-devices on the web."
+    />
+    <meta
+      name="twitter:image"
+      content="https://esphome.github.io/esp-web-tools/static/social.png"
+    />
+    <meta name="color-scheme" content="dark light" />
+<style>
+    body {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      padding: 0;
+      margin: 0;
+      line-height: 1.4;
+      background-color: #1e1e1e; /* Dark Gray Background similar to Flipper Zero */
+      color: #ADD8E6; /* blue Text Color similar to Flipper Zero */
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      margin-top: 2em;
+    }
+    a {
+      color: #ADD8E6; /* blue Link Color */
+    }
+    .invisible {
+      visibility: hidden;
+    }
+    esp-web-install-button[install-unsupported] {
+      visibility: inherit;
+    }
+    button {
+      background-color: #ADD8E6; /* blue Button Background */
+      color: #1e1e1e; /* Dark Gray Button Text Color */
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: ##0000FF; /* Darker blue Hover Color */
+    }
+    .textbox-container {
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ADD8E6; /* blue Border */
+      border-radius: 5px;
+      color: #1e1e1e; /* Dark Gray Text Color */
+      background-color: #2e2e2e; /* Dark Gray Background */
+    }
+    .warning {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1e1e1e; /* Dark Gray Background in dark mode */
+        color: #ADD8E6; /* blue Text Color in dark mode */
+      }
+      a {
+        color: #ADD8E6; /* blue Link Color in dark mode */
+      }
+      input[type="text"] {
+        background-color: #2e2e2e; /* Dark Gray Background in dark mode */
+        color: #1e1e1e; /* Dark Gray Text Color in dark mode */
+      }
+    }
+      
+      .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #444; /* Dark border */
+            background-color: #2e2e2e; /* Slightly lighter dark background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+  </style>
+    <script
+      type="module"
+      src="https://unpkg.com/@justinribeiro/lite-youtube@1.4.0/lite-youtube.js"
+    ></script>
+    <script module>
+      import(
+        // In development we import locally.
+        window.location.hostname === "localhost"
+          ? "/dist/web/install-button.js"
+          : "https://unpkg.com/esp-web-tools/dist/web/install-button.js?module"
+      );
+    </script>
+  </head>
+  <body>
+
+    <div class="content">
+        <div class="container">
+      <h1>Signal X Official Webflasher</h1>
+      <p>
+        Flash your Signal X FW to your device
+      </p>
+      <ul>
+        <li>Install &amp; update firmware</li>
+        <li>Access logs and send terminal commands</li>
+
+      </ul>
+
+      <h2 id="demo">Flash signalX (firmware)</h2>
+      <p>
+        This will install the signal x firmware to your m5stickcp2. To get started, connect the m5stick
+        device to your computer and hit the install buttonbutton:
+      </p>
+      <esp-web-install-button
+        manifest="https://mastrpcs.github.io/flash/signalx/manifest.json"
+        <title>Flashing</title>
+      >
+        <i slot="unsupported">
+          <title>Sorry this browser is not supported.</title>
+          This firmware is not available because your browser does not support Web
+          Serial. Try reopening this page again in a browser such as Google Chrome or Microsoft Edge<span
+            class="not-supported-i hidden"
+          >
+            (p.s iOS devices don't work)</span
+          >.
+        </i>
+      </esp-web-install-button>
+
+    <div class="footer">
+      <h2>Signal X for M5StickC Plus 2 </h2>
+      
+    </div>
+    
+      <div class="content">
+    <h2>Installation Guide from Signal X :</h2>
+    <ol>
+      <li>select your device from the list of supported devices.</li>
+      <li>Click on the 'Connect' button, then 'install' button to start the installation process.</li>
+      <li>Wait for the installation to complete, and follow any on-screen instructions if prompted.</li>
+    </ol>
+
+    <div class="warning">
+      <p><strong>Important:</strong> Make sure you only use compatible firmware for M5StickC Plus 2.</p>
+	  <a href="https://mastrpcs.github.io/"><p><strong>Webflasher by mastrpcs</strong></p> </a>.
+      </div>
+	  
+    </div>
+  </div>
+      
+</body>
+</html>
